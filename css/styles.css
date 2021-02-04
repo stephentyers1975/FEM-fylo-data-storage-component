@@ -1,0 +1,244 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  /* colors */
+
+  --clr-gradient1: hsl(6, 100%, 80%);
+  --clr-gradient2: hsl(335, 100%, 65%);
+
+  --clr-Pale-Blue: hsl(243, 100%, 93%);
+  --clr-Grayish-Blue: hsl(229, 7%, 55%);
+  --clr-Dark-Blue: hsl(228, 56%, 26%);
+  --clr-Very-Dark-Blue: hsl(229, 57%, 11%);
+
+  /* Fonts */
+  --ff-primary: "Raleway", sans-serif;
+
+  /* Shadows */
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  /* transition */
+  --transition: all 0.3s linear;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  background: var(--clr-Very-Dark-Blue);
+  color: white;
+  font-size: 14px;
+  padding: 4.5rem 0;
+  min-height: 100vh;
+  background-image: url(../images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.main {
+  width: 86vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.top {
+  background-color: var(--clr-Dark-Blue);
+  padding: 2.5rem;
+  border-radius: 8px;
+  border-top-right-radius: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  margin-top: 2.8rem;
+  width: 325px;
+}
+.logo-container {
+  width: 140px;
+  margin-bottom: 2rem;
+}
+.icons-container {
+  display: flex;
+}
+.icon-box {
+  width: 50px;
+  height: 50px;
+  margin-right: 0.9rem;
+  background-color: var(--clr-Very-Dark-Blue);
+  border-radius: 6px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-box img {
+  padding: 0.8rem;
+}
+.icon-box:first-child img {
+  padding: 0.9rem;
+}
+.bottom {
+  background-color: var(--clr-Dark-Blue);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 325px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom > p {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+.usage-span {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+}
+.usage-bar {
+  position: relative;
+  height: 1.1rem;
+  width: 100%;
+  background-color: var(--clr-Very-Dark-Blue);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.usage-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    var(--clr-gradient1),
+    var(--clr-gradient2)
+  );
+  height: 100%;
+  border: 2px solid var(--clr-Very-Dark-Blue);
+  width: 70%;
+  border-radius: 8px;
+}
+.circle {
+  position: absolute;
+  height: 0.65rem;
+  width: 0.65rem;
+  right: 31.5%;
+  border-radius: 50%;
+  background-color: white;
+  border: solid 2px transparent;
+}
+.usage-ammount {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.9;
+  margin-bottom: 1.2rem;
+}
+.usage-ammount span {
+  margin-left: 0.2rem;
+  font-size: 0.8rem;
+}
+.gb-left {
+  margin: 0.8rem auto 0 auto;
+  background-color: white;
+  color: black;
+  width: 55%;
+  padding: 0.9rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+  transform: translateY(50%);
+}
+.gb-left p {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.gb-left span {
+  font-size: 0.8rem;
+  opacity: 0.4;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+@media screen and (min-width: 996px) {
+  .main {
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 13rem;
+  }
+  .top,
+  .bottom {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .top {
+    margin-right: 2rem;
+    width: 350px;
+  }
+  .bottom {
+    margin-left: 0;
+    align-self: flex-end;
+    width: 540px;
+    position: relative;
+    padding-top: 2.2rem;
+    padding-bottom: 1.2rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  .circle {
+    right: 30.8%;
+  }
+  body {
+    background-image: url(../images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+  .gb-left {
+    width: 180px;
+    bottom: 94%;
+    right: 7%;
+    border-bottom-right-radius: 0;
+    margin-bottom: 1.4rem;
+  }
+  .gb-left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 10px solid white;
+    border-left: 10px solid transparent;
+    border-top: 10px solid white;
+    border-bottom: 10px solid transparent;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+  }
+  .bottom > p {
+    text-align: left;
+  }
+}
